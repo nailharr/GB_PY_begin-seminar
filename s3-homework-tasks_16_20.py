@@ -13,9 +13,25 @@
     -> 1
 """
 # ---------------------------------------------------------------- 16
+from random import randint
 
-
-
+#
+# a = []
+# n = int(input("Enter a number of elements: "))
+# x = int(input("Enter a number for find: "))
+#
+# print(n)
+#
+# for i in range(n):
+#     a.append(randint(1, 10))
+#
+# print(*a)
+# count = 0
+# for i in range(n):
+#     if a[i] == x:
+#         count += 1
+#
+# print(count)
 # =============================================================== END
 
 
@@ -33,7 +49,25 @@
 """
 # ---------------------------------------------------------------- 18
 
-
+# a = []
+# n = int(input("Enter a number of elements: "))
+# x = int(input("Enter a number for find: "))
+#
+# print(n)
+#
+# for i in range(n):
+#     a.append(randint(1, 10))
+#
+# print(a)
+#
+# minimum = abs(x - a[0])
+# index = 0
+# for i in range(1, n):
+#     count = abs(x - a[i])
+#     if count < minimum:
+#         minimum = count
+#         index = i
+# print(f'Число {a[index]} самый близкий по величине элемент к заданному числу {x}')
 
 # =============================================================== END
 
@@ -68,6 +102,20 @@ Q, Z – 10 очков.
 """
 # ---------------------------------------------------------------- 20
 
-
+# dict_letters = {1:"AEIOULNSTRАВЕИНОРСТ",
+#                 2:"DGДКЛМПУ",
+#                 3:"BCMPБГЁЬЯ",
+#                 4:"FHVWYЙЫ",
+#                 5:"KЖЗХЦЧ",
+#                 8:"JXШЭЮ",
+#                 10:"QZФЩЪ"}
+#
+# word = input("Enter a word: ").upper()
+# sum = 0
+# for i in word:
+#     for k, v in dict_letters.items():
+#         if i in v:
+#             sum += k
+# print(f"Cost of the word: {sum}")
 
 # =============================================================== END
