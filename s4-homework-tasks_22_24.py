@@ -1,3 +1,5 @@
+from random import randint
+
 # Урок 4. Словари, множества и профилирование
 
 """
@@ -11,8 +13,25 @@
 """
 # ---------------------------------------------------------------- 22
 
+n = int(input("Введите количество элементов первого набора чисел: "))
+m = int(input("Введите количество элементов второго набора чисел: "))
 
+lst1 = []
+for _ in range(n):
+    lst1.append(int(input("Введите элемент первого набора чисел: ")))
 
+lst2 = []
+for _ in range(m):
+    lst2.append(int(input("Введите элемент второго набора чисел: ")))
+
+print(lst1, lst2)
+
+a = set(lst1)
+b = set(lst2)
+
+c = sorted(a.intersection(b))
+
+print(c)
 # =============================================================== END
 
 
@@ -30,5 +49,16 @@
 # ---------------------------------------------------------------- 24
 
 
+bushes = int(input('Введите количество кустов черники: '))
+berries = []
+for _ in range(bushes):
+    a = randint(0, 20)
+    berries.append(a)
+print(f"Количество ягод на кустах: {berries}")
+
+collect = [berries[0] + berries[-1] + berries[-2]]
+for i in range(len(berries) - 1):
+    collect.append(berries[i] + berries[i - 1] + berries[i + 1])
+print(f"Макисимальное количество ягод на соседних кустах: {max(collect)}")
 
 # =============================================================== END
