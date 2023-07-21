@@ -11,14 +11,15 @@
 **Вывод:** Парам пам-пам
 """
 
+
 def rhythm_poem(str):
     phrase = text.split()
     lst = []
     for letter in phrase:
         count = 0
         for i in letter:
-                if i in 'аеёиоуыэюя':
-                    count += 1
+            if i in 'аеёиоуыэюя':
+                count += 1
         lst.append(count)
     return len(lst) == lst.count(lst[0])
 
@@ -30,7 +31,6 @@ if rhythm_poem(text):
     print('Парам пам-пам')
 else:
     print('Пам парам')
-
 
 """
 Задача 36: Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6), 
@@ -53,9 +53,14 @@ else:
 
 
 def print_operation_table(operation, num_rows=6, num_columns=6):
-    a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
-    for i in a:
-        print(*[f"{x:>3}" for x in i])
+    # a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
+    # for i in a:
+    #     print(*[f"{x:>3}" for x in i])
+
+    for row in range(1, num_rows + 1):
+        for column in range(1, num_columns + 1):
+            print(operation(row, column), end="\t")
+        print()
 
 
 print_operation_table(lambda x, y: x * y)
