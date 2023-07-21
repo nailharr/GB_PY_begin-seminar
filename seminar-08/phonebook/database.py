@@ -15,11 +15,11 @@ def find_contact(feature):
 
 
 def sort_contacts():
-    with open("phones.txt", "r", encoding='UTF-8') as ph:
-        lst = ph.readlines()
-    with open("phones.txt", "w", encoding='UTF-8') as ph:
-        lst_s = ph.readlines()
-        lst_s.sort(key=lambda x: x.split(',')[0])
+    # with open("phones.txt", "r", encoding='UTF-8') as ph:
+    #     lst = ph.readlines()
+    # with open("phones.txt", "w", encoding='UTF-8') as ph:
+    #     lst_s = ph.readlines()
+    #     lst_s.sort(key=lambda x: x.split(',')[0])
 
 
 
