@@ -1,11 +1,11 @@
 from datetime import datetime
 
 
-def input_number():
+def select_action():
     ask = int(input("1 - Создать новый контакт\n"
                     "2 - Показать список контактов\n"
-                    "3 - Найти контакт в справочнике\n"
-                    "4 - Отсортировать контакты\n"
+                    "3 - Показать отсортированный список контактов по номеру\n"
+                    "4 - Найти контакт в справочнике\n"
                     "5 - Изменить контакт\n"
                     "6 - Удалить контакт\n"
                     "… - \n"
@@ -17,16 +17,20 @@ def input_number():
 
 def input_contact():  # TODO: refactoring need
     contact_list = []
-    contact_id = contact_list.append(int(input("Порядковый номер: ")))  # TODO: add autoincrement
+    # contact_id = contact_list.append(auto_number() + 1)
     lastname = contact_list.append(input("Фамилия: "))
     name = contact_list.append(input("Имя: "))
     surname = contact_list.append(input("Отчество: "))
     phone_number = contact_list.append(input("Номер телефона: "))
     date_of_birth = contact_list.append(datetime.strptime(input("Дата рождения — DD.MM.YYY: "), '%d.%m.%Y'))
-    return contact_list
+    return ';'.join(map(str, contact_list))
 
 
-def input_feature():
+def search_feature():
     request_feature = input("Введите искомое значение: \n")
     return request_feature
 
+
+def select_contact():
+    ask_number = input("Введите номер контакта: ")
+    return ask_number

@@ -5,7 +5,7 @@ from notices import *
 
 def main():
     while True:
-        num = input_number()
+        num = select_action()
         if num == 0:
             print(msg(num), line)
             break
@@ -13,7 +13,6 @@ def main():
         elif num == 1:
             contact = input_contact()
             create_new_contact(contact)
-
             print(msg(num), line)
 
         elif num == 2:
@@ -22,12 +21,12 @@ def main():
                 print(msg(num), line)
 
         elif num == 3:
-            attribute = input_feature()
-            print(find_contact(attribute))
+            sort_contacts()
             print(msg(num), line)
 
         elif num == 4:
-            sort_contacts()
+            attribute = search_feature()
+            find_contact(attribute)
             print(msg(num), line)
 
         elif num == 5:
@@ -35,7 +34,9 @@ def main():
             print(msg(num), line)
 
         elif num == 6:
-            pass
+            feature = search_feature()
+            find_contact(feature)
+            delete_contact()
             print(msg(num), line)
 
         else:

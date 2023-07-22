@@ -18,9 +18,9 @@ def msg(x):
     elif x == 2:
         return end_list
     elif x == 3:
-        return end_find
-    elif x == 4:
         return sort_done
+    elif x == 4:
+        return end_find
     elif x == 5:
         return done_change_contact
     elif x == 6:
