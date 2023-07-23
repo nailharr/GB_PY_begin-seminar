@@ -26,12 +26,12 @@ def input_contact():  # TODO: refactoring need
 
 
 def search_feature():
-    request_feature = input("Введите искомое значение: \n")
+    request_feature = input("Введите поисковой запрос: \n")
     return request_feature
 
 
 def select_contact():
-    ask_number = input("Введите номер контакта: ")
+    ask_number = input("Введите номер контакта для совершения выбранного действия: ")
     return ask_number
 
 
