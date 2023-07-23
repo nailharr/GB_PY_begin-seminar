@@ -1,15 +1,11 @@
+from user_func import select_field
+
 filename = "phones.txt"
 
 
 def create_new_contact(contact):
     with open(filename, "a", encoding='UTF-8') as ph:
         ph.writelines(f"{contact}\n")
-
-
-# def auto_number():
-#     with open(filename, "r") as f:
-#         lines = len(f.readlines())
-#     return lines
 
 
 def find_contact(feature):
@@ -26,8 +22,9 @@ def find_contact(feature):
 def sort_contacts():
     with open(filename, "r", encoding='UTF-8') as ph:
         lst = ph.readlines()
-        lst.sort(key=lambda x: int(x.split(';')[0]))
-        print(*lst)
+        sort_selector = select_field() - 1
+        lst.sort(key=lambda x: x.split(';')[sort_selector])
+        print(''.join(lst))
 
 
 def delete_contact():
@@ -43,4 +40,9 @@ def delete_contact():
 
 
 def change_contact(contact):
-    pass
+    with open(filename, "r", encoding="UTF-8") as ph:
+        lst = ph.read()
+        lst_lines = lst.split('\n')
+        edit_index = int(input("Введите номер строки для редактирования: ")) - 1
+        edit_line = lst_lines[edit_index]
+        elmnts = edit_line.split(";")

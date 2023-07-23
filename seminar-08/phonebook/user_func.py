@@ -4,7 +4,7 @@ from datetime import datetime
 def select_action():
     ask = int(input("1 - Создать новый контакт\n"
                     "2 - Показать список контактов\n"
-                    "3 - Показать отсортированный список контактов по номеру\n"
+                    "3 - Показать сортированный список контактов\n"
                     "4 - Найти контакт в справочнике\n"
                     "5 - Изменить контакт\n"
                     "6 - Удалить контакт\n"
@@ -17,7 +17,6 @@ def select_action():
 
 def input_contact():  # TODO: refactoring need
     contact_list = []
-    # contact_id = contact_list.append(auto_number() + 1)
     lastname = contact_list.append(input("Фамилия: "))
     name = contact_list.append(input("Имя: "))
     surname = contact_list.append(input("Отчество: "))
@@ -34,3 +33,13 @@ def search_feature():
 def select_contact():
     ask_number = input("Введите номер контакта: ")
     return ask_number
+
+
+def select_field():
+    ask_field = int(input("Выберите поле для сортировки:\n"
+                          "1 - Фамилия\n"
+                          "2 - Имя\n"
+                          "3 - Отчество\n"
+                          "4 - Номер телефона\n"
+                          "5 - Дата рождения\n"))
+    return ask_field
